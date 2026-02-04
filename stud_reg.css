@@ -1,0 +1,67 @@
+:root {
+    --bg: #0f172a;
+    --card: rgba(255, 255, 255, 0.05);
+    --text: #f8fafc;
+    --accent: #6366f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif; /* Added quotes for safety */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Styles */
+.container {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Form Step Logic */
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+/* Input & UI Elements */
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px; /* Added for a cleaner look */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+button {
+    background: var(--accent);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Progress Bar */
+.progress-bar {
+    height: 4px;
+    background: var(--accent);
+    width: 0%;
+    transition: 0.3s;
+}
